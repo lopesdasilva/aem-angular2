@@ -18,8 +18,19 @@
     <head>
         <sly data-sly-include="partials/head.html" data-sly-unwrap/>
         <sly data-sly-include="partials/headlibs.html" data-sly-unwrap/>
+        <style>
+            #view-source {
+                position: fixed;
+                display: block;
+                right: 0;
+                bottom: 0;
+                margin-right: 40px;
+                margin-bottom: 40px;
+                z-index: 900;
+            }
+        </style>
     </head>
-    <body class="page ${currentPage.template.name}">
+    <body class="page ${currentPage.template.name} mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
         <sly data-sly-include="partials/main.html" data-sly-unwrap/>
         <sly data-sly-include="partials/footlibs.html" data-sly-unwrap/>
     </body>

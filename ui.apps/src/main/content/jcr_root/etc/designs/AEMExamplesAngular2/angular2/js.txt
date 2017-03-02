@@ -1,0 +1,9 @@
+#base=js
+
+es6-shim.min.js
+system-polyfills.js
+angular2-polyfills.js
+system.js
+typescript.js
+Rx.js
+angular2.js

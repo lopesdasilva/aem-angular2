@@ -13,16 +13,24 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div class="page__main" data-sly-use.main="main.js">
-    <header class="page__header">
-        <div class="page__logo" data-sly-resource="logo"></div>
-        <nav class="page__topnav" data-sly-resource="topnav"></nav>
-    </header>
+    <div class="page__main demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100" data-sly-use.main="main.js">
 
-    <div class="page__title" data-sly-resource="${'title' @ decorationTagName='div'}"></div>
-    <div class="page__par" data-sly-resource="par"></div>
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row" data-sly-resource="${'title' @ decorationTagName='div'}"></div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <nav class="page__topnav" data-sly-resource="topnav"></nav>
+        </header>
 
-    <footer class="page__footer">
-        <p class="page__copyright">${"&copy; {0} Angular2 Example Site. All rights reserved." @ i18n, format=main.year, context='html'}</p>
-    </footer>
+        <main class="mdl-layout__content">
+            <div class="mdl-layout__tab-panel is-active" id="overview">
+                <div class="page__par" data-sly-resource="par"></div>
+            </div>
+        </main>
+
+        <footer class="page__footer">
+            <p class="page__copyright">${"&copy; {0} Angular2 Example Site. All rights reserved." @ i18n, format=main.year, context='html'}</p>
+        </footer>
 </div>

@@ -1,0 +1,28 @@
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientLib.js @ categories='AEMExamplesAngular2CSS.content.angular2-helloworld'}"></sly>
+
+<script>
+    System.config({
+        transpiler: 'typescript',
+        typescriptOptions: { emitDecoratorMetadata: true },
+        packages: {'app': {defaultExtension: 'ts'}},
+        map: { 'app': '/apps/AEMExamplesAngular2/components/content/angular2-helloworld/ts' }
+    });
+    System.import('app/environment_main')
+        .then(null, console.error.bind(console));
+</script>
+
+
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+    <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+            <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
+
+
+            <my-app>Loading AppComponent content here ...</my-app>
+        </div>
+    </div>
+</section>
+
+

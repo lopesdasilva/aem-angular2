@@ -13,8 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<ul class="topnav" data-sly-use.topnav="topnav.js" data-sly-list="${topnav.items}">
-    <li class="topnav__item ${item.selected && 'topnav__item--selected'}">
-        <a class="topnav__link" href="${item.page.path}.html">${item.page.title}</a> 
-    </li>
-</ul>
+
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark" data-sly-use.topnav="topnav.js" data-sly-list="${topnav.items}" >
+            <a href="${item.page.path}.html" class="mdl-layout__tab is-active">${item.page.title}</a>
+        </div>
